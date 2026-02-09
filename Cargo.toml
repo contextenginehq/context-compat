@@ -1,0 +1,18 @@
+[package]
+name = "context-compat"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Compatibility test harness for the Context platform"
+
+[lib]
+name = "context_compat"
+path = "src/lib.rs"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[dev-dependencies]
+jsonschema = "0.41.0"
+tempfile = "3"

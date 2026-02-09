@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://context.dev/schemas/inspect-output-v0.json",
+  "title": "Inspect Output v0",
+  "type": "object",
+  "required": ["cache_version", "document_count", "total_bytes", "valid"],
+  "additionalProperties": false,
+  "properties": {
+    "cache_version": { "type": "string" },
+    "document_count": { "type": "integer", "minimum": 0 },
+    "total_bytes": { "type": "integer", "minimum": 0 },
+    "valid": { "type": "boolean" }
+  }
+}
