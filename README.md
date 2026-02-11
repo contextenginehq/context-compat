@@ -1,8 +1,19 @@
 # context-compat
 
-Standalone compatibility test harness for the Context platform. Tests the CLI and MCP server **externally** — no dependency on `context-core` or `mcp-context-server` crates.
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 
-## What it tests
+> `context-compat` is the independent verification harness for the Context platform. It ensures the platform's "Deterministic Guardrail" by testing CLI and MCP server binaries externally against frozen schemas and golden selection snapshots.
+
+## Purpose
+
+This harness provides the empirical proof of the platform's determinism and backward compatibility:
+
+- **External Verification**: Tests binaries as black-box artifacts to ensure protocol compliance regardless of internal implementation.
+- **Audit Verification**: Validates that selection logic produces the same audit-reproducible results across versions.
+- **Regression Detection**: Catch subtle floating-point or ordering variances before they reach production.
+- **Contract Enforcement**: Ensures all outputs strictly adhere to frozen JSON Schemas.
+
+## Test Matrix
 
 | Test suite | Purpose |
 |---|---|
